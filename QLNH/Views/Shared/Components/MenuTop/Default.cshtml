@@ -1,0 +1,10 @@
+﻿@model IEnumerable<QLNH.Models.TblMenu>
+
+@foreach(var item in Model.Where(i => i.Levels == 1))
+{
+	<li class="drop-holder">
+		<a href="/@item.MenuOrder">
+			@item.Title
+		</a>
+	</li>
+}
